@@ -1,4 +1,5 @@
-FROM openjdk:11
+#FROM openjdk:11
+FROM busybox
 COPY . /usr/src/myapp
 WORKDIR /usr/src/myapp
 RUN brew install gradle
