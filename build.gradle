@@ -1,9 +1,49 @@
 plugins {
     id 'java'
+//    id 'checkstyle'
+//    id "com.github.spotbugs" version "4.6.0"
+//    id "org.owasp.dependencycheck" version "6.2.2"
+//    id 'org.springframework.boot' version '2.3.7.RELEASE'
 }
 
 group 'org.example'
 version '1.0-SNAPSHOT'
+
+//subprojects {
+//    apply plugin: 'java'
+//    apply plugin: 'checkstyle'
+//    apply plugin: 'com.github.spotbugs'
+//    apply plugin: 'jacoco'
+//
+//    checkstyle {
+//        toolVersion = '8.17'
+//        configFile = rootProject.file("config/checkstyle.xml")
+//        showViolations = true
+//        ignoreFailures = false
+//        maxErrors = 0
+//        maxWarnings = 0
+//    }
+//
+//    jacocoTestCoverageVerification {
+//        violationRules {
+//            rule {
+//                limit {
+//                    minimum = 0.80
+//                }
+//            }
+//        }
+//    }
+//
+//    check.dependsOn jacocoTestCoverageVerification
+//
+//    dependencies {
+//        spotbugsPlugins 'com.h3xstream.findsecbugs:findsecbugs-plugin:1.7.1'
+//        spotbugsPlugins 'com.mebigfatguy.fb-contrib:fb-contrib:7.4.5'
+//    }
+//    spotbugs {
+//        excludeFilter = rootProject.file('config/spotbugs-excludes.xml')
+//    }
+//}
 
 repositories {
     mavenCentral()
@@ -23,3 +63,11 @@ jar {
         attributes 'Main-Class': 'HelloWorldTime'
     }
 }
+
+//project(':') {
+//    apply plugin: 'io.spring.dependency-management'
+//    bootJar {
+//        classifier = 'boot'
+//        mainClassName ='src/main/java/HelloWorldTime'
+//    }
+//}
